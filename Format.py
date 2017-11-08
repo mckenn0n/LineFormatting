@@ -12,9 +12,12 @@ def format(M, w):
 		if len(x) + 1 + sum_char < max_num:
 			sum_char += len(x)+1
 			line += x + ' '
+		elif len(x) + sum_char < max_num:
+			sum_char += len(x)
+			line += x
 		elif len(x) + sum_char == max_num:
 			line += x
-			print(line, " \t\tnumber of char (including space) = ",len(line))
+			print(line, " \n\tnumber of char (including space) = ",len(line))
 			line = ''
 			sum_char = 0
 		else:
